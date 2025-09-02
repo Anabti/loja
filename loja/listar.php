@@ -16,28 +16,26 @@
             <tbody>
             <?php
                 require 'conexao.php';
-                
                 $sql = "SELECT * FROM produtos";
                 $stmt = $pdo->query($sql);
                 while ($produto = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                    echo"<tr>";
-                    echo"<td>" . $produto['id'] ."</td>";
-                    echo"<td>". $produto ['nome'] ."</td>";
-                    echo"<td>" . $produto['preco'] . "</td>";
-                    echo"<td>" . $produto['quantidade'] . "</td>";
-                    echo"
+                    echo "<tr>";
+                    echo "<td>" . $produto['id'] . "</td>";
+                    echo "<td>" . $produto['nome'] . "</td>";
+                    echo "<td>" . $produto['preco'] . "</td>";
+                    echo "<td>" . $produto['quantidade'] . "</td>";
+                    echo "
                     <td>
-                        <div class='btn-group' role='group'>
-                            <a href='form_atualiza.php?' type='button' class='btn btn-danger'>ATUALIZAR</a>
+                       <div class='btn-group' role='group'>
+                            <a href='form_atualiza.php?id=" . $produto['id'] . "' type='button' class='btn btn-danger'>ATUALIZAR</a>
                             <a href='#' type='button' class='btn btn-warning'>APAGAR</a>
-                        </div>
+                        </div> 
                     </td>
                     ";
-                    echo "</td>";
-
-            
+                    echo "</tr>";                    
                 }
-            ?>            
+            ?>
+                                
             </tbody>
         </table>
     </div>

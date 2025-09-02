@@ -8,6 +8,6 @@
 </head>
 <body>
     <div class="container">
-        <h1>Sistema CRUD - LOJA</h1>
+        <h1>SISTEMA CRUD - LOJA</h1>
         <h2>Ana Beatriz Ribeiro Soares</h2>
     </div>
